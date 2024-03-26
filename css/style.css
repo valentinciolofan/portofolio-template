@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+h1 {
+    font-size: 4.5em;
+    text-transform: uppercase;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
+    background-color: #303030;
+}
+/* HEADER AND NAVBAR */
+header {
+    background-image: linear-gradient(to right, #8ecae6, #219ebc);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+   display: flex;
+   justify-content: center;
+   list-style-type: none;
+   gap: 1em;
+
+}
+nav li a {
+   text-decoration: none;
+   color: #e4e4e4;
+}
+nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+ }
+
+ /* END OF HEADER AND NAVBAR */
+
+ /* HERO SECTION */
+ header {
+    position: absolute;
+    top: 0%;
+    min-width: 100%;
+ }
+ .hero-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 120px 0px;
+    background-image: url(/images/bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+ .overlay {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+        pointer-events: none; 
+ }
+ .hero-page-columns {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
+ }
+ .col1 * {
+    margin-bottom: 10px;
+ }
+ .social-media-icons {
+    display: flex;
+    gap: 14px;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+ }
+ .social-media-icons a:hover svg path {
+    color: rgb(29, 132, 200);
+ }
+.col2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    gap: 20px;
+} 
+.col2 * {
+    max-width: 350px;
+}
+.col2-child2 {
+    order: 3;
+}
+.col2-child2 {
+    order: 1;
+}
+.hero-svg {
+    border: 2px rgb(29, 132, 200) solid;
+    padding: 15px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+.offer-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.btn-contact-me {
+    border: 2px rgb(29, 132, 200) solid;
+    padding: 16px 50px;
+    margin-top: 20px;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.btn-contact-me:hover {
+    transform: scale(105%);
+    transition: 0.4s;
+}
+.divider {
+    display: none;
+    margin-top: 22px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    min-width: 100%;
+}
+.divider * {
+    background-color: rgb(29, 132, 200);
+    content: ' ';
+    height: 2px;
+    width: 45%;
+}
+.divider-circle {
+    border-radius: 50%;
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+}
+ /* END OF HERO SECTION */
+
+/* ABOUT ME PAGE */
+.about-me-section {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+.about-me-container {
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #e4e4e4;
+    gap: 20px;
+}
+.about-me-container * {
+    color: #000;
+    text-align: center;
+}
+.avatar {
+    max-width: 100%;
+    border-radius: 50%;
+    min-height: auto;
+}
+
+.skill {
+    margin-bottom: 10px;
+  }
+  
+  .skill label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .skill-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 20px;
+  }
+  
+  .skill-level {
+    background-color: #007bff;
+    height: 20px;
+    border-radius: 5px;
+    transition: width 1s;
+  }
+
+/* END OF ABOUT ME PAGE STYLE */
+
+
+/* CONTACT PAGE*/
+.contact-section {
+    height: 100vh;
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    gap: 1rem;
+    min-width: 40%;
+    min-height: 300px;
+    background-color: grey;
+    padding: 2em;
+    border-radius: 0.5em;
+}
+
+
+/* END OF CONTACT PAGE STYLE */
+
+
+/* responsive design */
+
+@media screen and (min-width: 768px) {
+    .col2 {
+        flex-direction: row;
+    }
+    .col2-child2 {
+        order: 2;
+    }
+    .col2-child3 {
+        order: 3;
+    }
+    .divider {
+    display: flex;
+    }
+    .hero-page  {
+        padding: 0px;
+    }
+}
