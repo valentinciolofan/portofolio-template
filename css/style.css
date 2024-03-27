@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 * {
     margin: 0;
@@ -9,12 +9,29 @@
 h1 {
     font-size: 4.5em;
     text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;  
+}
+h2 {
+    font-size: 3.5em;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;  
+}
+h3 {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;  
 }
 body {
-    font-family: "Roboto", sans-serif;
+    background-color: rgb(185, 208, 213);
+    font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;  
-    background-color: #303030;
 }
 /* HEADER AND NAVBAR */
 header {
@@ -23,33 +40,62 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-nav {
-   display: flex;
-   justify-content: center;
-   list-style-type: none;
-   gap: 1em;
-
-}
-nav li a {
-   text-decoration: none;
-   color: #e4e4e4;
-}
-nav li a:hover {
-    text-decoration: none;
-    color: #fff;
- }
-
- /* END OF HEADER AND NAVBAR */
-
- /* HERO SECTION */
- header {
     position: absolute;
     top: 0%;
     min-width: 100%;
+    animation: fadeInDown 0.5s ease-out forwards;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 1em;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #e4e4e4;
+    animation: enterFromLeft 0.5s ease-out forwards;
+    animation-delay: calc(0.1s * var(--i)); /* Custom property for delay */
+}
+
+nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes enterFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+ footer {
+    display: flex;
+    justify-content: center;
+    padding: 40px 70px;
+    background-color: #333;
  }
- .hero-page {
+/* HERO SECTION */
+.hero-page {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,62 +105,74 @@ nav li a:hover {
     background-image: url(/images/bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
- }
- .overlay {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-        pointer-events: none; 
- }
- .hero-page-columns {
+}
+
+.overlay {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.hero-page-columns {
     display: flex;
     position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 70%;
- }
- .col1 * {
+}
+
+.col1 * {
     margin-bottom: 10px;
- }
- .social-media-icons {
+}
+
+.social-media-icons {
     display: flex;
     gap: 14px;
     font-size: 1.5rem;
     justify-content: center;
     align-items: center;
- }
- .social-media-icons a:hover svg path {
+}
+
+.social-media-icons a:hover svg path {
     color: rgb(29, 132, 200);
- }
+}
+
 .col2 {
     display: flex;
     flex-direction: column;
     margin-top: 100px;
     gap: 20px;
-} 
+}
+
 .col2 * {
     max-width: 350px;
 }
+
 .col2-child2 {
     order: 3;
 }
+
 .col2-child2 {
     order: 1;
 }
+
 .hero-svg {
     border: 2px rgb(29, 132, 200) solid;
     padding: 15px;
     border-radius: 50%;
     margin-bottom: 15px;
 }
+
 .offer-title {
     font-weight: 600;
     margin-bottom: 8px;
 }
+
 .btn-contact-me {
     border: 2px rgb(29, 132, 200) solid;
     padding: 16px 50px;
@@ -124,10 +182,12 @@ nav li a:hover {
     justify-content: center;
     text-decoration: none;
 }
+
 .btn-contact-me:hover {
     transform: scale(105%);
     transition: 0.4s;
 }
+
 .divider {
     display: none;
     margin-top: 22px;
@@ -136,17 +196,63 @@ nav li a:hover {
     gap: 6px;
     min-width: 100%;
 }
+
 .divider * {
     background-color: rgb(29, 132, 200);
     content: ' ';
     height: 2px;
     width: 45%;
 }
+
 .divider-circle {
     border-radius: 50%;
     background-color: #fff;
     width: 10px;
     height: 10px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-page-columns {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.social-media-icons a {
+    animation: zoomIn 0.5s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes pulsate {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.btn-contact-me:hover {
+    animation: pulsate 0.5s infinite alternate;
 }
  /* END OF HERO SECTION */
 
@@ -155,19 +261,35 @@ nav li a:hover {
     margin-top: 60px;
     display: flex;
     justify-content: center;
+    background-color: rgb(185, 208, 213);
 }
 .about-me-container {
     padding: 50px 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: #e4e4e4;
-    gap: 20px;
+    background-color: #fefefe;
+    gap: 40px;
+    max-width: 70%;
+    margin: 120px 50px;
+    border-radius: 4em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .about-me-container * {
     color: #000;
-    text-align: center;
 }
+.about-me-col1 {
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+}
+.about-me-col2 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    min-width: 100%;
+}
+
 .avatar {
     max-width: 100%;
     border-radius: 50%;
@@ -176,27 +298,100 @@ nav li a:hover {
 
 .skill {
     margin-bottom: 10px;
-  }
-  
-  .skill label {
+}
+
+.skill label {
     display: block;
     text-align: left;
     margin-bottom: 5px;
     font-weight: bold;
-  }
-  
-  .skill-bar {
+}
+
+.skill-bar {
     background-color: #e0e0e0;
     border-radius: 5px;
     height: 20px;
-  }
-  
-  .skill-level {
+}
+
+.skill-level {
     background-color: #007bff;
     height: 20px;
     border-radius: 5px;
     transition: width 1s;
-  }
+}
+
+.img1 {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.img2 {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.nav li, .about-me-section, .about-me-container, .my-skills, .skill {
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+}
+
+.about-me-col1, .avatar, .my-skills h1 {
+    animation-name: slideInLeft;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.about-me-col2, .img1, .col2-child1 {
+    animation-name: slideInRight;
+    animation-duration: 1s;
+    animation-delay: 0.7s;
+    animation-fill-mode: both;
+}
+
+.img2 {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+footer {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: both;
+}
+
+.skill-bar .skill-level {
+    width: 0; /* Initial width */
+    animation-name: growSkillBar;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes growSkillBar {
+    from { width: 0; }
+    to { width: inherit; } 
+}
+
 
 /* END OF ABOUT ME PAGE STYLE */
 
@@ -204,26 +399,101 @@ nav li a:hover {
 /* CONTACT PAGE*/
 .contact-section {
     height: 100vh;
-    margin-top: 10rem;
+    padding-top: 5rem;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
 }
+
 .contact-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #fff;
     gap: 1rem;
-    min-width: 40%;
-    min-height: 300px;
-    background-color: grey;
+    width: 40%;
+    max-width: 500px; 
+    background-color: #ffffffee; 
     padding: 2em;
-    border-radius: 0.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); 
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.contact-form:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
 
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #7f7fd5;
+}
+
+.contact-form button {
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #7f7fd5;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #91eae4;
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.contact-form h3 {
+    text-align: center;
+    color: #333;
+    animation: slideUp 0.5s ease forwards;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    animation: slideUp 0.5s ease forwards;
+}
+
+.contact-form input {
+    animation-delay: 0.3s;
+}
+
+.contact-form textarea {
+    animation-delay: 0.4s;
+}
+
+.contact-form button {
+    animation-delay: 0.5s;
+}
 /* END OF CONTACT PAGE STYLE */
+
+
+
+
 
 
 /* responsive design */
@@ -244,4 +514,37 @@ nav li a:hover {
     .hero-page  {
         padding: 0px;
     }
+
+
+    /* about me page*/
+    .about-me-col1 {
+        display: flex;
+        justify-content: center;
+    }
+    .my-skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 500px;
+    }
+    
+
+}
+@media screen and (min-width: 1024px) {
+    .about-me-col1 {
+        flex-direction: row;
+    }
+    .about-me-col2 {
+        margin-top: 150px;
+        flex-direction: row;
+        gap: 40px;
+        justify-content: center;
+        align-items: start;
+    }
+    .col2-child1 {
+        max-width: 60%;
+      }
+      .col2-child-2 {
+        max-width: 30%;
+      }
 }

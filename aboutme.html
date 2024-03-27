@@ -2,78 +2,87 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site prezentare</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site prezentare</title>
+  <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
 <body>
-    <header>
-        <nav class="nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutme.html">About me</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </nav>
-    </header>
-    <main>
-        <section class="about-me-section">
-            <div class="about-me-container">
-                <!-- col 1 -->
-                <div>
-                    <div>
-                        <img src="/images/basicallyme.png" class="avatar"/>
-                        <p>Web Developer</p>
-                    </div>
-                    <div>
-                    <!--my skills-->
-                        <h1>My Skills</h1>
-                        <div class="skill">
-                            <label for="html">HTML</label>
-                            <div class="skill-bar">
-                              <div class="skill-level" style="width: 90%;"></div>
-                            </div>
-                          </div>
-                          <div class="skill">
-                            <label for="css">CSS</label>
-                            <div class="skill-bar">
-                              <div class="skill-level" style="width: 85%;"></div>
-                            </div>
-                          </div>
-                          <div class="skill">
-                            <label for="javascript">JavaScript</label>
-                            <div class="skill-bar">
-                              <div class="skill-level" style="width: 75%;"></div>
-                            </div>
-                          </div>
-                          <div class="skill">
-                            <label for="react">React</label>
-                            <div class="skill-bar">
-                              <div class="skill-level" style="width: 80%;"></div>
-                            </div>
-                          </div>
-                    </div>
-                </div>
-                <!-- col 2-->
-                <div>
-                    <div>
-                    <h2>About Me</h2>    
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laborum sit voluptatum cupiditate quaerat unde, consectetur ipsum perspiciatis deserunt necessitatibus est praesentium. Ex suscipit ab mollitia at earum nam debitis.</p>
-                    </div>
-                    <img src="" />
-                </div>
-                <!--col 3-->
-                <div> 
-                    <img src="" />
-                </div>
+  <header>
+    <nav class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About me</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </nav>
+  </header>
+  <main>
+    <section class="about-me-section">
+      <div class="about-me-container">
+        <!-- col 1 -->
+        <div class="about-me-col1">
+          <div>
+            <img src="/images/basicallyme.png" class="avatar" />
+            <p>Web Developer</p>
+          </div>
+          <div class="my-skills">
+            <!--my skills-->
+            <h3>My Skills</h3>
+            <div class="skill">
+              <label for="html">HTML</label>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 90%;"></div>
+              </div>
             </div>
-        </section>
+            <div class="skill">
+              <label for="css">CSS</label>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 85%;"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <label for="javascript">JavaScript</label>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 75%;"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <label for="react">React</label>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 80%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- col 2-->
+        <div class="about-me-col2">
+          <div class="col2-child1">
+            <h3>About Me</h3>
+            <p>Hey there, I'm Valentin, a passionate Web Developer with a passion for turning ideas into digital
+              reality. Collaboration is key in my world. I thrive on working closely with teams to transform concepts
+              into captivating online experiences.
 
-    </main>
-    <footer>
+              My skill set is robust, boasting fluency in HTML, CSS, and JavaScript the foundational languages of the
+              web. I also specialize in cutting-edge frameworks like React and Astro, which allow me to build dynamic,
+              responsive, and visually stunning websites that leave a lasting impact.
 
-    </footer>
+              Let's team up and bring your digital dreams to life. With my expertise and your vision, we'll create web
+              solutions that stand out from the crowd and elevate your online presence.</p>
+          </div>
+          <div class="col2-child-2">
+            <img src="/images/about-me-img1.webp" class="img1" />
+          </div>
+        </div>
+        <!--col 3-->
+          <img src="/images/about-me-img2.webp" class="img2" />
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <p>Copyright © 2024 reserved Valentin Ciolofan</p>
+  </footer>
 </body>
 
 </html>
